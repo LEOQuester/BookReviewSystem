@@ -1,0 +1,122 @@
+<mxfile host="app.diagrams.net" modified="2023-10-15T16:06:08.092Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/118.0" etag="oKgQ8M56_H0DGOR9uXnx" version="22.0.4" type="device">
+  <diagram name="Page-1" id="cF1kt7CdDfD7vXwSGcM8">
+    <mxGraphModel dx="1467" dy="1883" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="GzDTUK1ZSudhXo1Uk-pZ-34" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d80073;fontColor=#ffffff;strokeColor=#A50040;" vertex="1" parent="1">
+          <mxGeometry x="380" y="30" width="570" height="750" as="geometry" />
+        </mxCell>
+        <mxCell id="GzDTUK1ZSudhXo1Uk-pZ-1" value="MS1 : User" style="whiteSpace=wrap;html=1;aspect=fixed;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="410" y="60" width="140" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="GzDTUK1ZSudhXo1Uk-pZ-20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="GzDTUK1ZSudhXo1Uk-pZ-2" target="GzDTUK1ZSudhXo1Uk-pZ-3">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="460" y="590" as="targetPoint" />
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="GzDTUK1ZSudhXo1Uk-pZ-2" value="Books" style="whiteSpace=wrap;html=1;aspect=fixed;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="410" y="280" width="140" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="GzDTUK1ZSudhXo1Uk-pZ-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.75;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="GzDTUK1ZSudhXo1Uk-pZ-3" target="GzDTUK1ZSudhXo1Uk-pZ-2">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="515" y="550" />
+              <mxPoint x="515" y="550" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="GzDTUK1ZSudhXo1Uk-pZ-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.75;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="GzDTUK1ZSudhXo1Uk-pZ-3" target="GzDTUK1ZSudhXo1Uk-pZ-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GzDTUK1ZSudhXo1Uk-pZ-3" value="Reviews" style="whiteSpace=wrap;html=1;aspect=fixed;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="410" y="600" width="140" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="GzDTUK1ZSudhXo1Uk-pZ-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="GzDTUK1ZSudhXo1Uk-pZ-4" target="GzDTUK1ZSudhXo1Uk-pZ-1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="150" y="130" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="GzDTUK1ZSudhXo1Uk-pZ-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="GzDTUK1ZSudhXo1Uk-pZ-4" target="GzDTUK1ZSudhXo1Uk-pZ-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GzDTUK1ZSudhXo1Uk-pZ-4" value="FrontEnd(React)" style="whiteSpace=wrap;html=1;aspect=fixed;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="70" y="270" width="160" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="GzDTUK1ZSudhXo1Uk-pZ-7" value="Fetch User Id in Login" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="210" y="160" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="GzDTUK1ZSudhXo1Uk-pZ-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.818;entryY=0.001;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="GzDTUK1ZSudhXo1Uk-pZ-1" target="GzDTUK1ZSudhXo1Uk-pZ-4">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="201" y="160" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="GzDTUK1ZSudhXo1Uk-pZ-9" value="Create User In Registration" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="160" y="100" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="GzDTUK1ZSudhXo1Uk-pZ-11" value="Upload/Edit/Delte a Book with Question" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="270" y="313" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="GzDTUK1ZSudhXo1Uk-pZ-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1.013;entryY=0.9;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="GzDTUK1ZSudhXo1Uk-pZ-2" target="GzDTUK1ZSudhXo1Uk-pZ-4">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="232" y="410" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="GzDTUK1ZSudhXo1Uk-pZ-13" value="Fetch all the Books details" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="280" y="380" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="GzDTUK1ZSudhXo1Uk-pZ-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=-0.002;entryY=0.826;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="GzDTUK1ZSudhXo1Uk-pZ-4" target="GzDTUK1ZSudhXo1Uk-pZ-3">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="150" y="716" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="GzDTUK1ZSudhXo1Uk-pZ-15" value="User Upload/Edit/Delete Reviews" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="210" y="680" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="GzDTUK1ZSudhXo1Uk-pZ-18" value="Get book details" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="350" y="500" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="GzDTUK1ZSudhXo1Uk-pZ-22" value="Get all Reviews avaialble ona book" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="513" y="510" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="GzDTUK1ZSudhXo1Uk-pZ-24" value="Get Reviews of a book" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="210" y="630" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="GzDTUK1ZSudhXo1Uk-pZ-26" value="User Data" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" vertex="1" parent="1">
+          <mxGeometry x="740" y="60" width="160" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="GzDTUK1ZSudhXo1Uk-pZ-28" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="GzDTUK1ZSudhXo1Uk-pZ-1" target="GzDTUK1ZSudhXo1Uk-pZ-26">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="740" y="130" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="GzDTUK1ZSudhXo1Uk-pZ-29" value="Books" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" vertex="1" parent="1">
+          <mxGeometry x="740" y="294" width="160" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="GzDTUK1ZSudhXo1Uk-pZ-30" value="Reviews" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" vertex="1" parent="1">
+          <mxGeometry x="740" y="580" width="160" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="GzDTUK1ZSudhXo1Uk-pZ-31" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=-0.011;entryY=0.379;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="GzDTUK1ZSudhXo1Uk-pZ-2" target="GzDTUK1ZSudhXo1Uk-pZ-29">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GzDTUK1ZSudhXo1Uk-pZ-32" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.018;entryY=0.595;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="GzDTUK1ZSudhXo1Uk-pZ-3" target="GzDTUK1ZSudhXo1Uk-pZ-30">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GzDTUK1ZSudhXo1Uk-pZ-35" value="&lt;font style=&quot;font-size: 70px;&quot;&gt;Book Reviewing System&lt;br&gt;&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;opacity=70;" vertex="1" parent="1">
+          <mxGeometry x="40" y="-26" width="1010" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
