@@ -9,7 +9,7 @@ public interface UserRepo extends JpaRepository<User, Long> {
 
     // Custom query methods can be defined here if needed.
 
-    User findByUsername(String username);
+    //User findByUsername(String username);
 
     User findByEmail(String email);
 

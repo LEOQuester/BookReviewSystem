@@ -3,12 +3,10 @@ package com.example.userservice.service;
 import com.example.userservice.data.User;
 import com.example.userservice.repo.UserRepo;
 import com.example.userservice.response.LoginResponse;
+import com.example.userservice.response.RegisterResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
-
-import java.util.List;
-import java.util.Optional;
 
 @Service
 public class UserService {
@@ -19,18 +17,12 @@ public class UserService {
     @Autowired
     private BCryptPasswordEncoder passwordEncoder;
 
-    public List<User> getAllUsers() {
-        return userRepo.findAll();
-    }
 
-    public Optional<User> getUserById(Long id) {
-        return userRepo.findById(id);
-    }
-
-    public User createUser(User user) {
+    public RegisterResponse createUser(User user) {
         // Hash the password before saving it to the database
         user.setPassword(hashPassword(user.getPassword()));
-        return userRepo.save(user);
+        userRepo.save(user);
+        return new RegisterResponse("Registration Done!", true);
     }
 
     public LoginResponse validateLogin(String email, String password) {
