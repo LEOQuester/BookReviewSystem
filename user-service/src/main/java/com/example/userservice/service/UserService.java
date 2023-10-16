@@ -19,10 +19,18 @@ public class UserService {
 
 
     public RegisterResponse createUser(User user) {
-        // Hash the password before saving it to the database
-        user.setPassword(hashPassword(user.getPassword()));
-        userRepo.save(user);
-        return new RegisterResponse("Registration Done!", true);
+        // Check if a user with the same email already exists
+        User existingUser = userRepo.findByEmail(user.getEmail());
+
+        if (existingUser != null) {
+            // User with the same email already exists
+            return new RegisterResponse("Email Already Exists", false);
+        } else {
+            // Hash the password before saving it to the database
+            user.setPassword(hashPassword(user.getPassword()));
+            userRepo.save(user);
+            return new RegisterResponse("Registration Done!", true);
+        }
     }
 
     public LoginResponse validateLogin(String email, String password) {
