@@ -1,7 +1,5 @@
 package com.example.userservice.controller;
-
 import com.example.userservice.data.User;
-import com.example.userservice.dto.UserDTO;
 import com.example.userservice.response.LoginResponse;
 import com.example.userservice.response.RegisterResponse;
 import com.example.userservice.service.UserService;
@@ -21,13 +19,13 @@ public class UserController {
     }
 
     @PostMapping("/login")
-    public LoginResponse loginUser(@RequestBody UserDTO userDTO) {
-        return userService.validateLogin(userDTO.getEmail(), userDTO.getPassword());
+    public LoginResponse loginUser(@RequestBody User user) {
+        return userService.validateLogin(user.getEmail(), user.getPassword());
     }
 
     @PostMapping("/validate")
-    public LoginResponse validateAccess(@RequestBody UserDTO userDTO) {
-        return userService.validateAccess(userDTO.getId(), userDTO.getPassword());
+    public LoginResponse validateAccess(@RequestBody User user) {
+        return userService.validateAccess(user.getId(), user.getPassword());
     }
 
 }
