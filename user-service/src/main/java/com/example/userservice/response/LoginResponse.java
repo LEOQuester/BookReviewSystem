@@ -1,16 +1,16 @@
 package com.example.userservice.response;
 
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
+@NoArgsConstructor
 public class LoginResponse {
 
     private Long userId;
     private String message;
     private boolean status;
-    // Default constructor
-    public LoginResponse() {
-    }
+
     public LoginResponse(Long userId, String message, boolean status) {
         this.userId = userId;
         this.message = message;

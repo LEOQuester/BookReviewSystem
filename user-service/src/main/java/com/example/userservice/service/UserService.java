@@ -4,6 +4,7 @@ import com.example.userservice.data.User;
 import com.example.userservice.repo.UserRepo;
 import com.example.userservice.response.LoginResponse;
 import com.example.userservice.response.RegisterResponse;
+import com.example.userservice.response.UserResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -18,6 +19,19 @@ public class UserService {
 
     @Autowired
     private BCryptPasswordEncoder passwordEncoder;
+
+    public UserResponse getUserById(Long id) {
+        UserResponse userResponse = new UserResponse();
+        Optional<User> userOptional = userRepo.findById(id);
+
+        if (userOptional.isPresent()) {
+            User user = userOptional.get();
+            userResponse.setUserName(user.getUsername());
+            userResponse.setEmail(user.getEmail());
+        }
+
+        return userResponse;
+    }
 
 
     public RegisterResponse createUser(User user) {
