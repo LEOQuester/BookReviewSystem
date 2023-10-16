@@ -11,7 +11,7 @@ public class BookResponse {
     private String bookAuthor;
     private String bookDescription;
     private double bookPrice;
-    private String bookImagePath;
+    private byte[] bookImage;
     private String userName;
     private String userEmail;
 

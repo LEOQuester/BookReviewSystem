@@ -32,7 +32,7 @@ public class BookService {
     public String createBook(MultipartFile image, Book book) {
         // Handle image upload
         String fileName = image.getOriginalFilename();
-        String uploadDir = "./uploads";
+        String uploadDir = "./uploads/";
         String filePath = uploadDir + fileName;
 
         try {
@@ -64,7 +64,7 @@ public class BookService {
         bookResponse.setBookAuthor(book.getBookAuthor());
         bookResponse.setBookDescription(book.getBookDescription());
         bookResponse.setBookPrice(book.getBookPrice());
-        bookResponse.setBookImagePath(book.getBookImagePath());
+        bookResponse.setBookImage(fetchImageContent(book.getBookImagePath()));
 
         if (userDTO != null) {
             bookResponse.setUserName(userDTO.getUserName());
@@ -74,5 +74,15 @@ public class BookService {
             bookResponse.setUserEmail("User Email Not Found");
         }
         return bookResponse;
+    }
+
+    private byte[] fetchImageContent(String imagePath) {
+        try {
+            // Read the image content as a byte array
+            return Files.readAllBytes(Paths.get(imagePath));
+        } catch (IOException e) {
+            e.printStackTrace();
+            return new byte[0];
+        }
     }
 }

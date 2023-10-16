@@ -26,6 +26,7 @@ public class UserService {
 
         if (userOptional.isPresent()) {
             User user = userOptional.get();
+            userResponse.setUserId(user.getId());
             userResponse.setUserName(user.getUsername());
             userResponse.setEmail(user.getEmail());
         }
