@@ -8,6 +8,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import java.util.Optional;
+
 @Service
 public class UserService {
 
@@ -49,6 +51,23 @@ public class UserService {
         }
         return loginResponse;
     }
+
+    public LoginResponse validateAccess(Long id, String password) {
+        Optional<User> userOptional = userRepo.findById(id);
+
+        if (userOptional.isPresent()) {
+            User user = userOptional.get();
+
+            if (passwordEncoder.matches(password, user.getPassword())) {
+                return new LoginResponse(user.getId(), "valid", true);
+            } else {
+                return new LoginResponse(null, "Invalid", false);
+            }
+        } else {
+            return new LoginResponse(null, "No User", false);
+        }
+    }
+
 
     private String hashPassword(String password) {
         return passwordEncoder.encode(password);

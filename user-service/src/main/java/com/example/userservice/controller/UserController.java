@@ -25,4 +25,9 @@ public class UserController {
         return userService.validateLogin(userDTO.getEmail(), userDTO.getPassword());
     }
 
+    @PostMapping("/validate")
+    public LoginResponse validateAccess(@RequestBody UserDTO userDTO) {
+        return userService.validateAccess(userDTO.getId(), userDTO.getPassword());
+    }
+
 }
