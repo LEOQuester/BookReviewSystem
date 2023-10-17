@@ -9,6 +9,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequestMapping("/books")
@@ -23,6 +24,10 @@ public class BookController {
     @PostMapping
     public String addBook(@RequestParam("image") MultipartFile image, @ModelAttribute Book book) {
         return bookService.createBook(image, book);
+    }
+    @GetMapping(path = "/{id}")
+    public Optional<BookResponse> getBookById(@PathVariable Long id){
+        return bookService.getBookById(id);
     }
 
 }

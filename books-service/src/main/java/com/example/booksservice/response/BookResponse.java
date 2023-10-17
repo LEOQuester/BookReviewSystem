@@ -14,5 +14,4 @@ public class BookResponse {
     private byte[] bookImage;
     private String userName;
     private String userEmail;
-
 }

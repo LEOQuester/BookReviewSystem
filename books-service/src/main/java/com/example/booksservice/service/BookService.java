@@ -14,6 +14,7 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.nio.file.StandardCopyOption;
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Service
@@ -27,6 +28,42 @@ public class BookService {
         return books.stream()
                 .map(this::mapToBookResponse)
                 .collect(Collectors.toList());
+    }
+    public Optional<BookResponse> getBookById(Long id) {
+        Optional<Book> optionalBook = bookRepo.findById(id);
+
+        if (!optionalBook.isPresent()) {
+            return Optional.empty(); // Book not found, return an empty Optional
+        }
+
+        Book book = optionalBook.get();
+        BookResponse bookResponse = new BookResponse();
+
+        bookResponse.setBookImage(fetchImageContent(book.getBookImagePath()));
+        bookResponse.setBookName(book.getBookName());
+        bookResponse.setBookPrice(book.getBookPrice());
+        bookResponse.setBookDescription(book.getBookDescription());
+        bookResponse.setBookAuthor(book.getBookAuthor());
+
+        String apiUrl = "http://localhost:8081/users/" + book.getUserId();
+        RestTemplate restTemplate = new RestTemplate();
+
+        try {
+            UserDTO userDTO = restTemplate.getForObject(apiUrl, UserDTO.class, book.getUserId());
+            if (userDTO != null) {
+                bookResponse.setUserName(userDTO.getUserName());
+                bookResponse.setUserEmail(userDTO.getEmail());
+            } else {
+                bookResponse.setUserName("User Not Found");
+                bookResponse.setUserEmail("User Email Not Found");
+            }
+        } catch (Exception e) {
+            // Handle exceptions that might occur during the HTTP request
+            bookResponse.setUserName("User Not Found");
+            bookResponse.setUserEmail("User Email Not Found");
+        }
+
+        return Optional.of(bookResponse);
     }
 
     public String createBook(MultipartFile image, Book book) {

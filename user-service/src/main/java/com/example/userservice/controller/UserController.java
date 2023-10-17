@@ -24,12 +24,12 @@ public class UserController {
         return userService.createUser(user);
     }
 
-    @PostMapping("/login")
+    @GetMapping("/login")
     public LoginResponse loginUser(@RequestBody User user) {
         return userService.validateLogin(user.getEmail(), user.getPassword());
     }
 
-    @PostMapping("/validate")
+    @PostMapping ("/validate")
     public LoginResponse validateAccess(@RequestBody User user) {
         return userService.validateAccess(user.getId(), user.getPassword());
     }
