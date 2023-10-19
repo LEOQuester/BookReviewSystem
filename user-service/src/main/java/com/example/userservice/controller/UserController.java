@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/users")
+@CrossOrigin
 public class UserController {
 
     @Autowired
@@ -24,7 +25,7 @@ public class UserController {
         return userService.createUser(user);
     }
 
-    @GetMapping("/login")
+    @PostMapping("/login")
     public LoginResponse loginUser(@RequestBody User user) {
         return userService.validateLogin(user.getEmail(), user.getPassword());
     }
