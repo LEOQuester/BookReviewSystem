@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Container, Paper, TextField, Typography } from '@mui/material';
+import { Button, Container, Paper, TextField, Typography, Link } from '@mui/material';
 import LockIcon from '@mui/icons-material/Lock';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
@@ -23,7 +23,7 @@ const Login = () => {
           Cookies.set('password', values.password);
           alert('Login success! Proceed');
         } else {
-          alert('Login failed! please try again');
+          alert('Login failed! Please try again');
         }
       })
       .catch((error) => {
@@ -32,8 +32,12 @@ const Login = () => {
   };
 
   return (
-    <Container maxWidth="xs" style={{marginTop: '5%'}}>
-      <Paper elevation={3} style={{ padding: '2rem', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+    <Container maxWidth="md" style={{ marginTop: '5%', display: 'flex', justifyContent: 'space-between' }}>
+      <div style={{ flex: 1 }}>
+        {/* Add your image here */}
+        <img src="/cover.jpg" alt="Your Image" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+      </div>
+      <Paper elevation={3} style={{ flex: 1, padding: '2rem', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
         <LockIcon style={{ fontSize: '4rem', marginBottom: '1rem', color: 'primary' }} />
         <Typography variant="h4" component="h2">
           Login
@@ -43,7 +47,7 @@ const Login = () => {
           validationSchema={validationSchema}
           onSubmit={handleLogin}
         >
-          <Form style={{ display: 'flex', flexDirection: 'column', width: '100%', }}>
+          <Form style={{ display: 'flex', flexDirection: 'column', width: '100%' }}>
             <Field as={TextField} label="Email" name="email" variant="outlined" margin="normal" />
             <ErrorMessage name="email" component="div" style={{ color: 'red' }} />
 
@@ -53,6 +57,9 @@ const Login = () => {
             <Button type="submit" variant="contained" color="primary" style={{ marginTop: '1rem' }}>
               Login
             </Button>
+            <Link href="/register" variant="body2">
+              New user? Register here
+            </Link>
           </Form>
         </Formik>
       </Paper>

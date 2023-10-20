@@ -8,6 +8,8 @@ import {
   Grid,
 } from '@mui/material';
 import Navbar from '../components/NavBar';
+import { BrowserRouter as Router,Link,Route } from 'react-router-dom';
+import Reviews from './Reviews';
 
 const Books = () => {
   const [books, setBooks] = useState([]);
@@ -45,6 +47,9 @@ const Books = () => {
                   <Typography variant="body1" color="textPrimary">
                     Price: ${book.bookPrice}
                   </Typography>
+                  <Link to={`/reviews/${book.id}`} style={{ color: 'brown', cursor: 'pointer' }}>
+                    See Reviews {book.id}
+                  </Link>
                 </CardContent>
               </Card>
             </Grid>

@@ -61,8 +61,8 @@ public class ReviewService {
         // Step 3: Check the Validation Result
         if (userValidationResponse != null && userValidationResponse.getStatus()) {
             // User is validated, proceed to delete the review
-            //reviewRepo.deleteById(reviewDeleteDTO.getId());
-            return "user deleted successfully";
+            reviewRepo.deleteById(reviewDeleteDTO.getId());
+            return "review deleted successfully";
         } else {
             // User validation failed, handle the error or provide an appropriate response
             return "user validation failed";
